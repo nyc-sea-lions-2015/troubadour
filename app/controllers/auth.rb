@@ -8,7 +8,9 @@ post '/signin' do
 end
 
 post '/signup' do
-
+  user = User.new(params[:user])
+  puts user.user_name
+  puts user.password_digest
   redirect '/'
 end
 
