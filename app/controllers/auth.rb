@@ -1,5 +1,5 @@
 get '/signin' do
-  'sign in'
+  erb :'auth/signin'
 end
 
 post '/signin' do
