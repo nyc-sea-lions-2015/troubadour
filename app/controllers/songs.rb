@@ -12,7 +12,8 @@ post '/songs/new' do
 end
 
 get '/songs/:id' do
-  erb :'/songs/show'
+  cur_song = Song.find(params[:id])
+  erb :'/songs/show', locals: {song: cur_song}
 end
 
 put '/songs/:id/edit' do
