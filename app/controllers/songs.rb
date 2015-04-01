@@ -8,7 +8,7 @@ get '/songs/new' do
 end
 
 post '/songs/new' do
-  puts 'create a song'
+  puts params
   redirect '/'
 end
 
