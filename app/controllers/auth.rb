@@ -9,9 +9,14 @@ end
 
 post '/signup' do
   user = User.new(params[:user])
-  puts user.user_name
-  puts user.password_digest
-  redirect '/'
+  if user.save
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    redirect '/signin'
+  end
+
+  puts session
 end
 
 get '/signout' do
