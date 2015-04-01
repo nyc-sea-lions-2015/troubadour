@@ -1,2 +1,4 @@
 <h1>home page</h1>
+<% if session[:user_id] %>
 <%= erb :'auth/_edit' %>
+<% end %>
