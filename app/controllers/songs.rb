@@ -3,7 +3,7 @@ get '/songs' do
 end
 
 get '/songs/new' do
-  'create a song form'
+  erb :'/songs/new'
 end
 
 post '/songs/new' do
