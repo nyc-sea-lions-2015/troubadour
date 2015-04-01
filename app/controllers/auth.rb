@@ -8,8 +8,8 @@ post '/signin' do
 end
 
 post '/signup' do
-  puts 'create new user'
-  redirect '/signin'
+
+  redirect '/'
 end
 
 get '/signout' do
