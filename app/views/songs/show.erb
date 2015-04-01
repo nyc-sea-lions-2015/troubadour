@@ -1,9 +1,11 @@
-<%= song.title %><br>
-<%= song.user.user_name %><br>
-<%= song.content %><br>
+<div id='song_info'>
+  <%= song.title %><br>
+  <%= song.user.user_name %><br>
+  <%= song.content %><br>
+</div>
 
 <% if session[:user_id] %>
-  <div class='container'>
+  <div class='favorite_form'>
     <form action='/favorites/<%= song.id %>' method='post'>
       <input type='submit' value='favorite song'>
     </form>
