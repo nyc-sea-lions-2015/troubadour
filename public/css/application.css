@@ -1,3 +1,14 @@
+* {
+  font-family: Lucinda Console;
+}
+
 #song_info {
   background-color: red;
 }
+
+header {
+  background-color: lightblue;
+}
+
+
+
