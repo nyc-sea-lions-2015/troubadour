@@ -7,9 +7,8 @@ post '/favorites/:id' do
     )
 
   if favorite.save
-    redirect '/songs'
+    redirect "/songs/#{params[:id]}"
   else
     [500, 'Something went wrong!']
   end
-
 end
