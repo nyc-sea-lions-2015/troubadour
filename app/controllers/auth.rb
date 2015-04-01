@@ -16,7 +16,6 @@ post '/signup' do
     redirect '/signin'
   end
 
-  puts session
 end
 
 get '/signout' do
