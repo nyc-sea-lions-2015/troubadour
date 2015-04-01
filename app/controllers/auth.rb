@@ -3,7 +3,7 @@ get '/signin' do
 end
 
 post '/signin' do
-  puts params
+
   redirect '/'
 end
 
