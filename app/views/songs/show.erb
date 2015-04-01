@@ -1,4 +1,11 @@
 <%= song.title %><br>
 <%= song.user.user_name %><br>
 <%= song.content %><br>
-<%= erb :'favorites/_favorite' %>
+
+<% if session[:user_id] %>
+  <div class='container'>
+    <form action='/favorites/<%= song.id %>' method='post'>
+      <input type='submit' value='favorite song'>
+    </form>
+  </div>
+<% end %>
