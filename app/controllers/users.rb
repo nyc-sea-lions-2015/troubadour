@@ -24,6 +24,7 @@ get '/users/:id' do
 end
 
 delete '/users/:id' do
-  'You deleted a user...'
+  user_to_delete = User.find(params[:id])
+  puts user_to_delete.user_name
 end
 
