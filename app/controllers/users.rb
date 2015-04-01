@@ -23,3 +23,7 @@ get '/users/:id' do
   erb :'/users/show', locals: {user: cur_user}
 end
 
+delete '/users/:id' do
+  'You deleted a user...'
+end
+
