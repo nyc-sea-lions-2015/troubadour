@@ -1,5 +1,5 @@
 get '/users/:id/edit' do
-  'Edit your artist!'
+  erb :'users/edit'
 end
 
 get '/users/:id' do
