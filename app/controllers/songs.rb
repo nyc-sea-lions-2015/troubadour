@@ -1,5 +1,5 @@
 get '/songs' do
-  'all songs'
+  erb :'/songs/index'
 end
 
 get '/songs/new' do
