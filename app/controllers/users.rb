@@ -1,4 +1,5 @@
 get '/users/:id' do
-  erb :'/users/show'
+  cur_user = User.find(params[:id])
+  erb :'/users/show', locals: {user: cur_user}
 end
 
