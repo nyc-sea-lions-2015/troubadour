@@ -1,7 +1,6 @@
 <% if session[:user_id] == nil %>
   <h3>or</h3>
   <h2>Sign up</h2>
-<% end %>
 <div class='container'>
   <form action='/signup' method='post'>
     Username<input type='text' name='user[user_name]'><br>
@@ -9,3 +8,4 @@
     <input type='submit' value='sign up'>
   </form>
 </div>
+<% end %>
