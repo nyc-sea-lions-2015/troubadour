@@ -25,6 +25,7 @@ end
 
 delete '/users/:id' do
   user_to_delete = User.find(params[:id])
-  puts user_to_delete.user_name
+  user_to_delete.destroy
+  redirect '/signout'
 end
 
