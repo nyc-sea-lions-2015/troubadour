@@ -3,7 +3,8 @@ get '/signin' do
 end
 
 post '/signin' do
-  'authorize user'
+  puts params
+  redirect '/'
 end
 
 post '/signup' do
