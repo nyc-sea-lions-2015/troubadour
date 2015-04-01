@@ -1,5 +1,6 @@
 get '/songs' do
-  erb :'/songs/index'
+  all_songs = Song.all
+  erb :'/songs/index', locals: {songs: all_songs}
 end
 
 get '/songs/new' do
