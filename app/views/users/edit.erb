@@ -1,0 +1,8 @@
+Edit Yourself
+<div class='container'>
+  <form action='/users' method='post'>
+    <input type='hidden' name='_method' value='put'>
+    username<input type='text' placeholder='<%= user.user_name %>' name='[user]user_name'><br>
+    <input type='submit' value='update'>
+  </form>
+</div>

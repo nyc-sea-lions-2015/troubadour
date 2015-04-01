@@ -1,5 +1,6 @@
 get '/users/:id/edit' do
-  erb :'users/edit'
+  cur_user = User.find(session[:user_id])
+  erb :'users/edit', locals: {user: cur_user}
 end
 
 get '/users/:id' do
