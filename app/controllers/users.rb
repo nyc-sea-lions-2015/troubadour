@@ -1,5 +1,15 @@
 put '/users/:id' do
-  puts params
+  user_to_update = User.find(params[:id])
+  if user_to_update
+    user_to_update.user_name = params[:user][:user_name]
+    if user_to_update.save
+      redirect "/users/#{user_to_update.id}"
+    else
+      [500, 'Something went wrong!']
+    end
+  else
+    [400, 'Could not edit user!']
+  end
 end
 
 get '/users/:id/edit' do
