@@ -1,5 +1,9 @@
 Songwriter Profile<br>
-<%= user.user_name %>
+<%= user.user_name %><br><br>
+<%= user.user_name%>'s favorites:<br>
+<% user.favorites.each do |favorite| %>
+  <%= favorite.song.title %>
+<% end %>
 
 
 
