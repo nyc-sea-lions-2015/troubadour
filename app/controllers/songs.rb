@@ -8,7 +8,14 @@ get '/songs/new' do
 end
 
 post '/songs/new' do
-  puts params
+  song = Song.new(params[:song])
+  song.user_id = session[:user_id]
+  puts song.user.user_name
+  # if song.save!
+  #   redirect '/songs'
+  # else
+  #   [500, 'Song not saved!']
+  # end
   redirect '/'
 end
 
