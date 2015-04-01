@@ -7,11 +7,11 @@ get '/songs/new' do
 end
 
 post '/songs/new' do
-  'create a song'
+  puts 'create a song'
 end
 
 get '/songs/:id' do
-  'show single song'
+  erb :'/songs/show'
 end
 
 put '/songs/:id/edit' do
