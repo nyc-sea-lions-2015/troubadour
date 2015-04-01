@@ -3,8 +3,13 @@ get '/signin' do
 end
 
 post '/signin' do
-  puts params
-  redirect '/'
+  user = User.find_by(user_name: params[:user][:user_name])
+  if user.try(:authenticate, params[:user][:password])
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    redirect '/signin'
+  end
 end
 
 post '/signup' do
