@@ -1,3 +1,5 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_secure_password
+  has_many :songs
+  has_many :favorites
 end
