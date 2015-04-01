@@ -1,5 +1,5 @@
 <% songs.each do |song| %>
 <ul>
-  <li><%= song.title %></li>
+  <li><a href='songs/<%= song.id %>'><%= song.title %></a> | written by | <a href='users/<%= song.user.id %>'><%= song.user.user_name%></a></li>
 </ul>
 <% end %>
