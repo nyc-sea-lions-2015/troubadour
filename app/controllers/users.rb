@@ -1,4 +1,4 @@
 get '/users/:id' do
-  'show user profile'
+  erb :'/users/show'
 end
 
