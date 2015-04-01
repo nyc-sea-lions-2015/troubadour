@@ -1,3 +1,7 @@
 <% if session[:user_id] %>
-<a href='#'>favorite this song</a>
+  <div class='container'>
+    <form action='/favorite/new' method='post'>
+      <input type='submit' value='favorite song'>
+    </form>
+  </div>
 <% end %>
