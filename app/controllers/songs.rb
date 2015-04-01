@@ -3,16 +3,18 @@ get '/songs' do
 end
 
 get '/songs/new' do
-  'create a song'
+  'create a song form'
 end
 
-post '/s'
+post '/songs/new' do
+  'create a song'
+end
 
 get '/songs/:id' do
   'show single song'
 end
 
-put '/songs/:id' do
+put '/songs/:id/edit' do
   'edit single song'
 end
 
