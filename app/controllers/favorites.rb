@@ -7,7 +7,8 @@ post '/favorites/:id' do
     )
 
   if favorite.save
-    redirect "/songs/#{params[:id]}"
+    @favorites_count = User.find(params[:id]).favorites.count
+    erb :'songs/show', layout: false
   else
     [500, 'Something went wrong!']
   end

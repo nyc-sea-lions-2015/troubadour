@@ -1,6 +1,11 @@
 $(document).ready(function() {
-  $('.favorite_form').on('click', function(e){
+  $('.favorite_form').on('submit', function(e){
     e.preventDefault();
-    console.log('favorite action prevented!')
+    $.ajax({
+      type: $(e.target).attr('method'),
+      url: $(e.target).attr('action')
+    }).done(function(response){
+      console.log(response);
+    });
   });
 });
